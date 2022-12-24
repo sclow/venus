@@ -2,8 +2,8 @@ from mythic_payloadtype_container.MythicCommandBase import *
 import json
 
 class ExitArguments(TaskArguments):
-    def __init__(self, command_line):
-        super().__init__(command_line)
+    def __init__(self, command_line, **kwargs):
+        super().__init__(command_line, **kwargs)
         self.args = {}
 
     async def parse_arguments(self):

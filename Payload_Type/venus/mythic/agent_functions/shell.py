@@ -3,8 +3,8 @@ from mythic_payloadtype_container.MythicRPC import *
 import json
 
 class ShellArguments(TaskArguments):
-    def __init__(self, command_line):
-        super().__init__(command_line)
+    def __init__(self, command_line, **kwargs):
+        super().__init__(command_line, **kwargs)
         self.args = [
             CommandParameter(
                 name="command",
