@@ -5,11 +5,13 @@ import json
 class ShellArguments(TaskArguments):
     def __init__(self, command_line):
         super().__init__(command_line)
-        self.args = {
-            "command": CommandParameter(
-                name="command", type=ParameterType.String, description="Command to run"
+        self.args = [
+            CommandParameter(
+                name="command",
+                type=ParameterType.String,
+                description="Command to run"
             )
-        }
+        ]
 
     async def parse_arguments(self):
         if len(self.command_line) > 0:
